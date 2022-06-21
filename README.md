@@ -21,7 +21,7 @@ Voir [GIT.md](GIT.md)
 
 ## Prérequis à installer
 
-Voir [INSTALL.md](INSTALL.md) sur le site du cours.
+Voir [INSTALL.md](INSTALL.md) 
 
   - ocaml évidemment
   - dune et make
