@@ -21,7 +21,7 @@ Voir [GIT.md](GIT.md)
 
 ## Prérequis à installer
 
-Voir [INSTALL.md](https://gaufre.informatique.univ-paris-diderot.fr/letouzey/pf5/blob/master/INSTALL.md) sur le site du cours.
+Voir [INSTALL.md](INSTALL.md) sur le site du cours.
 
   - ocaml évidemment
   - dune et make
