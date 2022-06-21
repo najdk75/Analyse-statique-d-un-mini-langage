@@ -1,0 +1,78 @@
+
+
+*********************************************Identifiants*********************************************
+
+
+
+______________________________________________________
+Nom , Prénom , numéro d'étudiant :
+______________________________________________________
+NASR   Amira     21965931
+______________________________________________________
+KACEM  Najd      71613477
+______________________________________________________
+
+
+***************************************** Compilation et exécution **********************************
+1) Pour la compilation :
+  $ make
+2) Pour l'exécution    :
+
+- Pour réafficher le programme en partant de la syntaxe abstraite obtenueet suivant les règles indiquées de syntaxe concrète :
+   $ ./run -reprint exemples/nom_du_fichier
+
+- Pour évaluer le programme :
+   $ ./run -eval  exemples/nom_du_fichier
+
+- Pour simplifier le programme :
+   $ ./run -simpl  exemples/nom_du_fichier
+
+- Pour afficher les variables de ce programme (toutes les variables + les non-initialisées):
+   $ ./run -vars  exemples/nom_du_fichier
+
+- Pour afficher les signes de variables de ce programme et déterminer le risque de division par zéro :
+
+   $ ./run -sign  exemples/nom_du_fichier
+
+
+
+   *****************************************   Fonctionnalités ***************************************
+
+  Les différentes Fonctionnalités implémentées sont les suivantes :
+
+  *) sujet minimal :
+    Read ; Print ; Eval ; Simpl ; Vars ; Sign
+  *) Utilisation de la récursivité terminale
+  *) Utilisation de la récursivité mutuelle
+  *) Écriture fonctionnelle pure (pas de préférences, tableaux, boucles ni enregistrements à champs mutables)
+
+   *****************************************     Découpage modulaire     **************************************
+
+    Le traitemnet pris en charge par chaque module (.ml) de votre projet est le suivant :
+
+     syntax.ml : contient la syntaxe abstraite Polish
+     read.ml : lire un fichier contenant un programme Polish et le traduire en syntaxe abstraite.
+     print.ml: réafficher le programme en syntaxe concrète en partant de la syntaxe abstraite
+     eval.ml : évaluer le programme
+     simpl.ml: simplification d’un programme effectuant une propagation des constantes et l’élimination des blocs “morts”
+     vars.ml : calcul statique des variables risquant d’être accédées avant d’être écrites + des variables du programme
+     sign.ml : analyse statique du signe possible des variables lors du déroulement du programme,
+     ne détermine malheureusement pas la ligne d'une potentielle erreur.
+
+
+
+   *****************************************     Organisation de travail **************************************
+  les tâches ont été réparties entre les membres du groupe de la façon suivante :
+
+ Premier rendu : Najd :  read & print & eval
+                 Amira : read & print
+
+ Deuxièmme rendu : Najd : sign & vars
+                   Amira: simpl
+
+   ***************************************** Remarques /Conclusion    **************************************
+
+Nous avons pu employer tout ce que nous avons appris en OCaml pendant ce semestre, le cours de programmation fonctionnelle ayant été
+    d'une importance particulière. En effet, il nous a permis de comprendre les bases du travail en groupe avec les systèmes de contrôle de versions (git) et
+    l'utilité des outils de constructions (dune).
+Dans l'ensemble, il y avait une bonne coordination dans les rôles de chacun et une bonne entente au sein de l'équipe était présente.
